@@ -3,6 +3,9 @@ import mysql.connector
 import os
 import time
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
