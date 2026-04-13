@@ -11,11 +11,11 @@ app = Flask(__name__)
 
 # ─── DATABASE CONFIG ──────────────────────────────────────────────
 DB_CONFIG = {
-    "host":     os.environ.get("DB_HOST", "your-rds-endpoint.rds.amazonaws.com"),
-    "port":     int(os.environ.get("DB_PORT", 3306)),
-    "user":     os.environ.get("DB_USER", "admin"),
-    "password": os.environ.get("DB_PASSWORD", "yourpassword"),
-    "database": os.environ.get("DB_NAME", "taskdb"),
+    "host":     os.environ.get("DB_HOST"),
+    "port":     int(os.environ.get("DB_PORT"),
+    "user":     os.environ.get("DB_USER"),
+    "password": os.environ.get("DB_PASSWORD"),
+    "database": os.environ.get("DB_NAME"),
 }
 
 def get_connection():
